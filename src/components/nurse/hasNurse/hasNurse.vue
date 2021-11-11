@@ -13,7 +13,7 @@
         <el-button  type="primary" icon="" @click="getAll">显示全部</el-button>
         <el-button class="filter-item" type="primary" @click="handelCreate"  icon="edit">添加</el-button>
         <el-button class="filter-item" type="primary" @click="handleDelAll"  icon="edit">全部删除</el-button>
-        <el-button class="filter-item" type="primary" icon="document" @click="handleDownload">导出</el-button>
+<!--        <el-button class="filter-item" type="primary" icon="document" @click="handleDownload">导出</el-button>-->
       </div>
 
       <el-table ref="multipleTable" :data="table" border tooltip-effect="dark"  style="width: 100%" @selection-change="handleSelectionChange">
@@ -46,7 +46,7 @@
          <el-pagination @size-change="handleSizeChange"
       @current-change="handleCurrentChange"  :page-sizes="[7,10,20,30]" :page-size="10" layout="total, sizes, prev, pager, next, jumper" :total="80">
          </el-pagination>
-      </div>  
+      </div>
       <!-- 添加信息功能的表单 -->
       <el-dialog title="添加信息" :visible.sync="dialogFormVisible">
         <el-form class="small-space" :model="form" label-position="left" label-width="70px" style='width: 400px; margin-left:50px;'>
@@ -79,7 +79,7 @@
           </el-form-item>
         </el-form>
         <div slot="footer" class="dialog-footer">
-          <el-button @click="dialogFormVisible = false">取 消</el-button>          
+          <el-button @click="dialogFormVisible = false">取 消</el-button>
           <el-button type="primary" @click="handleCreateSubmit">确 定</el-button>
           <el-button type="primary" @click="resetForm('form')">重置</el-button>
         </div>
@@ -123,11 +123,11 @@
           </el-form-item>
         </el-form>
         <div slot="footer" class="dialog-footer">
-          <el-button @click="dialogFormEditVisible = false">取 消</el-button>          
+          <el-button @click="dialogFormEditVisible = false">取 消</el-button>
           <el-button type="primary" @click="handleEditSubmit">确 定</el-button>
         </div>
       </el-dialog>
-    
+
     </div>
 </template>
 
@@ -334,7 +334,7 @@ export default {
 };
 </script>
 
-<style lang="stylus-loader" rel="stylesheet/stylus">   
+<style lang="stylus-loader" rel="stylesheet/stylus">
   .nurse_table
     padding:10 10px
     margin-top:50px

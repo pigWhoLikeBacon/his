@@ -2,7 +2,7 @@
     <div class="staffFlow">
       <span class="tittle">人员流动记录信息表</span>
       <div class="replyBtn">
-        <el-button class="filter-item" type="primary" icon="document" @click="handleDownload">导出</el-button>
+<!--        <el-button class="filter-item" type="primary" icon="document" @click="handleDownload">导出</el-button>-->
         <el-button size="big" type="primary" @click="handleCreate">添加离职人员信息</el-button>
       </div>
       <el-table :data="staffFlowlist" style="width: 100%;" height="500">
@@ -75,7 +75,7 @@
           </el-form-item>
         </el-form>
         <div slot="footer" class="dialog-footer">
-          <el-button @click="dialogFormVisible = false">取 消</el-button>          
+          <el-button @click="dialogFormVisible = false">取 消</el-button>
           <el-button type="primary" @click="handleCreateSubmit">确 定</el-button>
           <el-button type="primary" @click="formClear">重置</el-button>
         </div>

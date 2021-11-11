@@ -14,7 +14,7 @@
       <el-button  type="primary" icon="" @click="getAll">显示全部</el-button>
       <el-button class="filter-item" type="primary" @click="handelCreate"  icon="edit">添加</el-button>
       <el-button class="filter-item" type="primary" @click="handleDelAll"  icon="edit">全部删除</el-button>
-      <el-button class="filter-item" type="primary" icon="document" @click="handleDownload">导出</el-button>
+<!--      <el-button class="filter-item" type="primary" icon="document" @click="handleDownload">导出</el-button>-->
     </div>
 
     <el-table v-if="table" :data="table" border style="width: 100%" height="400">
@@ -70,7 +70,7 @@
           </el-form-item>
         </el-form>
         <div slot="footer" class="dialog-footer">
-          <el-button @click="dialogFormVisible = false">取 消</el-button>          
+          <el-button @click="dialogFormVisible = false">取 消</el-button>
           <el-button type="primary" @click="handleCreateSubmit">确 定</el-button>
           <el-button type="primary" @click="resetForm('form')">重置</el-button>
         </div>
@@ -118,7 +118,7 @@
           </el-form-item>
         </el-form>
          <div slot="footer" class="dialog-footer">
-          <el-button @click="dialogFormEditVisible = false">取 消</el-button>          
+          <el-button @click="dialogFormEditVisible = false">取 消</el-button>
           <el-button type="primary" @click="handleEditSubmit">确 定</el-button>
          </div>
       </el-dialog>

@@ -7,7 +7,7 @@
       <el-button type="primary" icon="search" @click="search">搜索</el-button>
       <el-button type="primary" icon="view" @click="showAll">显示全部</el-button>
 
-      <el-button type="primary" icon="document" @click="handleDownload">导出</el-button>
+<!--      <el-button type="primary" icon="document" @click="handleDownload">导出</el-button>-->
     </div>
     <!-- 患者挂号信息列表 -->
     <el-table :data="patients" border style="width: 100%; text-align:left">

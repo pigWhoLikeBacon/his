@@ -4,22 +4,22 @@
         <el-button>
           <div class="wapper">
             <span>{{easeHis}}</span>
-            <img id="userPic"src="//2.gravatar.com/avatar/767fc9c115a1b989744c755db47feb60?s=132&d=wavatar" alt="user" height="40">
+<!--            <img id="userPic"src="//2.gravatar.com/avatar/767fc9c115a1b989744c755db47feb60?s=132&d=wavatar" alt="user" height="40">-->
             <i class="el-icon-caret-bottom"></i>
           </div>
         </el-button>
         <el-dropdown-menu slot="dropdown">
           <router-link to="home"><el-dropdown-item>首页</el-dropdown-item></router-link>
-          <el-dropdown-item>修改密码</el-dropdown-item>
-            <el-dropdown-item>
-              <span class="el-dropdown-link" @click="personalShow">个人主页<i class="el-icon-caret-bottom el-icon--right"></i></span>
-            </el-dropdown-item>
-            <el-dropdown-item :class="{ show: isShow }" class="personalDropdown">
-              <el-dropdown-item><router-link to="addPersonalDate">新建个人档案</router-link></el-dropdown-item>
-              <el-dropdown-item><router-link to="absenceRequest">申请休假</router-link></el-dropdown-item>
-              <el-dropdown-item><router-link to="departure">申请离职</router-link></el-dropdown-item>
-              <el-dropdown-item><router-link to="hasComplaints">查看投诉信息</router-link></el-dropdown-item>
-            </el-dropdown-item>
+<!--          <el-dropdown-item>修改密码</el-dropdown-item>-->
+<!--          <el-dropdown-item>-->
+<!--            <span class="el-dropdown-link" @click="personalShow">个人主页<i class="el-icon-caret-bottom el-icon&#45;&#45;right"></i></span>-->
+<!--          </el-dropdown-item>-->
+<!--          <el-dropdown-item :class="{ show: isShow }" class="personalDropdown">-->
+<!--            <el-dropdown-item><router-link to="addPersonalDate">新建个人档案</router-link></el-dropdown-item>-->
+<!--            <el-dropdown-item><router-link to="absenceRequest">申请休假</router-link></el-dropdown-item>-->
+<!--            <el-dropdown-item><router-link to="departure">申请离职</router-link></el-dropdown-item>-->
+<!--            <el-dropdown-item><router-link to="hasComplaints">查看投诉信息</router-link></el-dropdown-item>-->
+<!--          </el-dropdown-item>-->
           <a @click="userLog"><el-dropdown-item>退出登录</el-dropdown-item></a>
         </el-dropdown-menu>
       </el-dropdown>
@@ -70,7 +70,7 @@
     padding: 0 20px
     color: #48576a
     font-size:12px
-    .el-dropdown-menu__item.personalDropdown  
+    .el-dropdown-menu__item.personalDropdown
       overflow:hidden
       height:20px
       .isShow

@@ -5,7 +5,7 @@
      <el-input style="width: 200px;" placeholder="医生姓名" v-model="searchName"></el-input>
      <el-button  type="primary" icon="search" @click="search">搜索</el-button>
      <el-button  type="primary" icon="" @click="getAll">显示全部</el-button>
-     <el-button class="filter-item" type="primary" icon="document" @click="handleDownload">导出</el-button>
+<!--     <el-button class="filter-item" type="primary" icon="document" @click="handleDownload">导出</el-button>-->
     </div>
     <!-- 表格 -->
     <el-table :data="doctorlist" border style="width: 100%;">
@@ -16,27 +16,27 @@
       </el-table-column>
       <el-table-column fixed prop="name" label="姓名" width="150">
       </el-table-column>
-      <el-table-column fixed prop="sex" label="性别" width="150"> 
+      <el-table-column fixed prop="sex" label="性别" width="150">
       </el-table-column>
       <el-table-column fixed  label="入职日期" width="150">
         <template scope="scope">
           {{scope.row.date}}
-        </template> 
+        </template>
       </el-table-column>
-      <el-table-column fixed prop="degree" label="学历" width="150"> 
+      <el-table-column fixed prop="degree" label="学历" width="150">
       </el-table-column>
-      <el-table-column fixed prop="major" label="专业" width="150"> 
-      </el-table-column>
-      <el-table-column fixed prop="profession" label="职称" width="150"> 
-      </el-table-column>
-      <el-table-column fixed prop="office" label="科室" width="150"> 
-      </el-table-column>
-      <el-table-column fixed="right" prop="operate" label="操作" width="150"> 
+<!--      <el-table-column fixed prop="major" label="专业" width="150">-->
+<!--      </el-table-column>-->
+<!--      <el-table-column fixed prop="profession" label="职称" width="150">-->
+<!--      </el-table-column>-->
+<!--      <el-table-column fixed prop="office" label="科室" width="150">-->
+<!--      </el-table-column>-->
+      <el-table-column fixed="right" prop="operate" label="操作" width="150">
         <template scope="scope">
           <el-button @click.native.prevent="edictDoctor(scope.$index)" type="primary" size="small">编辑</el-button>
           <el-button @click.native.prevent="delectDoctor(scope.$index, doctorlist)" type="danger" size="small">删除</el-button>
         </template>
-      </el-table-column>     
+      </el-table-column>
     </el-table>
     <!-- 表格 -->
     <!-- dialog对话框 -->
@@ -61,15 +61,15 @@
             <el-option label="硕士" name="master" value="硕士"></el-option>
           </el-select>
         </el-form-item>
-        <el-form-item label="专业" :label-width="formLabelWidth">
-          <el-input v-model="doctorlistedit.major" auto-complete="off"></el-input>
-        </el-form-item>
-        <el-form-item label="职称"  :label-width="formLabelWidth">
-          <el-input v-model="doctorlistedit.profession" auto-complete="off"></el-input>
-        </el-form-item>
-        <el-form-item label="科室"  :label-width="formLabelWidth">
-          <el-input v-model="doctorlistedit.office" auto-complete="off"></el-input>
-        </el-form-item>
+<!--        <el-form-item label="专业" :label-width="formLabelWidth">-->
+<!--          <el-input v-model="doctorlistedit.major" auto-complete="off"></el-input>-->
+<!--        </el-form-item>-->
+<!--        <el-form-item label="职称"  :label-width="formLabelWidth">-->
+<!--          <el-input v-model="doctorlistedit.profession" auto-complete="off"></el-input>-->
+<!--        </el-form-item>-->
+<!--        <el-form-item label="科室"  :label-width="formLabelWidth">-->
+<!--          <el-input v-model="doctorlistedit.office" auto-complete="off"></el-input>-->
+<!--        </el-form-item>-->
       </el-form>
       <div slot="footer" class="dialog-footer">
         <el-button @click="dialogFormVisible = false">取 消</el-button>

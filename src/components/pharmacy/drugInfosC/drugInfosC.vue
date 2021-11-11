@@ -5,7 +5,7 @@
       <el-input placeholder="药品名" v-model="searchValue"></el-input>
       <el-button type="primary" icon="search" @click="search()">搜索</el-button>
 
-      <el-button type="primary" icon="document" @click="handleDownload">导出</el-button>
+<!--      <el-button type="primary" icon="document" @click="handleDownload">导出</el-button>-->
       <el-button type="primary" icon="view" @click="showAll">显示全部</el-button>
     </div>
     <!-- 药物信息列表 -->

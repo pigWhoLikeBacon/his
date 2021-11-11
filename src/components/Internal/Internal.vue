@@ -4,44 +4,44 @@
     <!-- 菜单开始 -->
       <div class="menu" :class="{ smallNav: isCollapse }">
         <el-menu default-active="1-4-1" class="el-menu-vertical-demo"  :collapse="isCollapse"  theme="dark">
-          <el-menu-item index="1"  @click="navToggle">
-            <template>
-              <i :class="{ 'icon-packUp': !isCollapse ,'icon-spread': isCollapse }"></i>
-              <span slot="title">收起/展开面板</span>
-            </template>
-          </el-menu-item>
-          <el-submenu index="2" v-if="type === '01' || type === '03'">
-            <template slot="title">
-              <i class="icon-nurse"></i>
-              <span slot="title">护士管理系统</span>
-            </template>
-            <el-menu-item-group>
-              <span slot="title">护士人员信息管理</span>
-              <el-menu-item index="2-1"><router-link to="addNurse">增加新护士信息</router-link></el-menu-item>
-              <!--（查询、删除、编辑）-->
-              <el-menu-item index="2-2"><router-link to="hasNurse">已存在护士信息</router-link></el-menu-item>
-            </el-menu-item-group>
-            <el-menu-item-group title="日常工作以及其他">
-              <el-menu-item index="2-3"><router-link to="shift">轮班</router-link></el-menu-item>
-              <el-menu-item index="2-5"><router-link to="turnOver">人员流动信息</router-link></el-menu-item>
-              <el-menu-item index="2-6"><router-link to="complainInfo">查看投诉信息</router-link></el-menu-item>
-            </el-menu-item-group>
-          </el-submenu>
+<!--          <el-menu-item index="1"  @click="navToggle">-->
+<!--            <template>-->
+<!--              <i :class="{ 'icon-packUp': !isCollapse ,'icon-spread': isCollapse }"></i>-->
+<!--              <span slot="title">收起/展开面板</span>-->
+<!--            </template>-->
+<!--          </el-menu-item>-->
+<!--          <el-submenu index="2" v-if="type === '01' || type === '03'">-->
+<!--            <template slot="title">-->
+<!--              <i class="icon-nurse"></i>-->
+<!--              <span slot="title">护士管理系统</span>-->
+<!--            </template>-->
+<!--            <el-menu-item-group>-->
+<!--              <span slot="title">护士人员信息管理</span>-->
+<!--              <el-menu-item index="2-1"><router-link to="addNurse">增加新护士信息</router-link></el-menu-item>-->
+<!--              &lt;!&ndash;（查询、删除、编辑）&ndash;&gt;-->
+<!--              <el-menu-item index="2-2"><router-link to="hasNurse">已存在护士信息</router-link></el-menu-item>-->
+<!--            </el-menu-item-group>-->
+<!--            <el-menu-item-group title="日常工作以及其他">-->
+<!--              <el-menu-item index="2-3"><router-link to="shift">轮班</router-link></el-menu-item>-->
+<!--              <el-menu-item index="2-5"><router-link to="turnOver">人员流动信息</router-link></el-menu-item>-->
+<!--              <el-menu-item index="2-6"><router-link to="complainInfo">查看投诉信息</router-link></el-menu-item>-->
+<!--            </el-menu-item-group>-->
+<!--          </el-submenu>-->
           <el-submenu index="3" v-if="type === '01' || type === '02'">
             <template slot="title">
               <i class="icon-doctor"></i>
               <span slot="title">医生管理系统</span>
             </template>
             <el-menu-item-group>
-              <span slot="title">医生人员信息管理</span>
+<!--              <span slot="title">医生人员信息管理</span>-->
               <el-menu-item index="3-1"><router-link to="addDoctor">增加医生信息</router-link></el-menu-item>
               <el-menu-item index="3-2"><router-link to="editDoctor">编辑医生信息</router-link></el-menu-item>
             </el-menu-item-group>
-            <el-menu-item-group title="日常工作以及其他">
-              <el-menu-item index="3-3"><router-link to="shiftDoctor">轮班</router-link></el-menu-item>
-              <el-menu-item index="3-4"><router-link to="staffFlow">人员流动信息</router-link></el-menu-item>
-              <el-menu-item index="3-5"><router-link to="officeComplaints">科室投诉信息</router-link></el-menu-item>
-            </el-menu-item-group>
+<!--            <el-menu-item-group title="日常工作以及其他">-->
+<!--              <el-menu-item index="3-3"><router-link to="shiftDoctor">轮班</router-link></el-menu-item>-->
+<!--              <el-menu-item index="3-4"><router-link to="staffFlow">人员流动信息</router-link></el-menu-item>-->
+<!--              <el-menu-item index="3-5"><router-link to="officeComplaints">科室投诉信息</router-link></el-menu-item>-->
+<!--            </el-menu-item-group>-->
           </el-submenu>
           <el-submenu index="4" v-if="type === '01' || type === '04'">
             <template slot="title">
@@ -49,7 +49,7 @@
               <span slot="title">前台收银系统</span>
             </template>
             <el-menu-item-group>
-              <span slot="title">挂号收银</span>
+<!--              <span slot="title">挂号收银</span>-->
               <el-menu-item index="4-1"><router-link to="register">挂号</router-link></el-menu-item>
               <el-menu-item index="4-2"><router-link to="registerManage">管理挂号信息</router-link></el-menu-item>
               <el-menu-item index="4-3"><router-link to="takecash">缴费办理</router-link></el-menu-item>
@@ -77,18 +77,18 @@
               <el-menu-item index="5-6"><router-link to="drugApplyW">申请药物补给</router-link></el-menu-item>
             </el-menu-item-group>
           </el-submenu>
-          <el-submenu index="6" v-if="type === '01' || type === '06'">
-            <template slot="title">
-              <i class="icon-DrugStorage"></i>
-              <span slot="title">药库系统</span>
-            </template>
-            <el-menu-item-group>
-              <el-menu-item index="6-1"><router-link to="drugStorage">进药</router-link></el-menu-item>
-              <el-menu-item index="6-2"><router-link to="checkDrugStorage">查看药库</router-link></el-menu-item>
-              <el-menu-item index="6-3"><router-link to="stockRemoval">出药</router-link></el-menu-item>
-              <el-menu-item index="6-3"><router-link to="trashy">浪费的药物</router-link></el-menu-item>
-            </el-menu-item-group>
-          </el-submenu>
+<!--          <el-submenu index="6" v-if="type === '01' || type === '06'">-->
+<!--            <template slot="title">-->
+<!--              <i class="icon-DrugStorage"></i>-->
+<!--              <span slot="title">药库系统</span>-->
+<!--            </template>-->
+<!--            <el-menu-item-group>-->
+<!--              <el-menu-item index="6-1"><router-link to="drugStorage">进药</router-link></el-menu-item>-->
+<!--              <el-menu-item index="6-2"><router-link to="checkDrugStorage">查看药库</router-link></el-menu-item>-->
+<!--              <el-menu-item index="6-3"><router-link to="stockRemoval">出药</router-link></el-menu-item>-->
+<!--              <el-menu-item index="6-3"><router-link to="trashy">浪费的药物</router-link></el-menu-item>-->
+<!--            </el-menu-item-group>-->
+<!--          </el-submenu>-->
           <el-submenu index="7">
             <template slot="title">
               <i class="icon-patient"></i>
@@ -109,8 +109,8 @@
             <el-menu-item-group>
               <!-- <el-menu-item index="8-1"><router-link to="hisIntroduction">医院基本介绍</router-link></el-menu-item> -->
               <el-menu-item index="8-2"><router-link to="staffIntroduction">医生护士概况</router-link></el-menu-item>
-              <el-menu-item index="8-3"><router-link to="patientCount">今周患者就诊数量统计</router-link></el-menu-item>
-              <el-menu-item index="8-4"><router-link to="patientFeedback">患者反馈</router-link></el-menu-item>
+<!--              <el-menu-item index="8-3"><router-link to="patientCount">今周患者就诊数量统计</router-link></el-menu-item>-->
+<!--              <el-menu-item index="8-4"><router-link to="patientFeedback">患者反馈</router-link></el-menu-item>-->
             </el-menu-item-group>
           </el-submenu>
         </el-menu>

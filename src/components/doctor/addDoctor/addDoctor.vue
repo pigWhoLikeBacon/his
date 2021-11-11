@@ -23,15 +23,15 @@
             <el-option label="硕士" value="master"></el-option>
           </el-select>
         </el-form-item>
-        <el-form-item label="专业" prop="major">
-          <el-input v-model="form.major"></el-input>
-        </el-form-item>
-        <el-form-item label="职称" prop="profession">
-          <el-input v-model="form.profession"></el-input>
-        </el-form-item>
-        <el-form-item label="科室" prop="office">
-          <el-input v-model="form.office"></el-input>
-        </el-form-item>
+<!--        <el-form-item label="专业" prop="major">-->
+<!--          <el-input v-model="form.major"></el-input>-->
+<!--        </el-form-item>-->
+<!--        <el-form-item label="职称" prop="profession">-->
+<!--          <el-input v-model="form.profession"></el-input>-->
+<!--        </el-form-item>-->
+<!--        <el-form-item label="科室" prop="office">-->
+<!--          <el-input v-model="form.office"></el-input>-->
+<!--        </el-form-item>-->
         <el-form-item class="buttonAdd">
           <el-button type="primary" @click="submitForm('form')">增 加</el-button>
           <el-button type="danger" @click="resetForm ('form')">重 置</el-button>
